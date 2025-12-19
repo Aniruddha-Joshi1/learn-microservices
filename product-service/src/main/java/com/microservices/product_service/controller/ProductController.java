@@ -18,6 +18,10 @@ import java.util.List;
 public class ProductController {
     private ProductService productService;
 
+    public ProductController(ProductService productService){
+        this.productService = productService;
+    }
+
     @PostMapping
     public ResponseEntity<Void> createProduct(@RequestBody ProductRequest productRequest){
         try{
